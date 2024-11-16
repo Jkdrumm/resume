@@ -1,95 +1,106 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { MotionButton } from "@/components/compound/MotionButton";
+import { MotionText } from "@/components/compound/MotionText";
+import StarField from "@/components/compound/StarField";
+import { Box, Container } from "@chakra-ui/react";
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { RiArrowRightLine } from "react-icons/ri";
+import { useRouter } from "next/navigation";
+import { PrefetchKind } from "next/dist/client/components/router-reducer/router-reducer-types";
 
-export default function Home() {
+export default function Welcome() {
+  const router = useRouter();
+  const [pauseAnimation, setPauseAnimation] = useState(false);
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <Box minH="100vh" position="relative">
+      <StarField pauseAnimation={pauseAnimation} />
+      <Container py="8">
+        <Box mt="24" display="flex" flexDir="column">
+          <AnimatePresence>
+            {!pauseAnimation && (
+              <>
+                <MotionText
+                  key="name"
+                  textStyle={{ base: "5xl", md: "6xl" }}
+                  initial={{ opacity: 0, transform: "translateY(-20px)" }}
+                  animate={{
+                    opacity: 1,
+                    transform: "translateY(0px)",
+                    transition: {
+                      duration: 0.5,
+                      delay: 0.5,
+                    },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transform: "translateY(-20px)",
+                    transition: {
+                      duration: 0.5,
+                    },
+                  }}
+                >
+                  Joshua Drumm
+                </MotionText>
+                <MotionText
+                  key="title"
+                  textStyle="2xl"
+                  initial={{ opacity: 0, transform: "translateY(-20px)" }}
+                  animate={{
+                    opacity: 1,
+                    transform: "translateY(0px)",
+                    transition: {
+                      duration: 0.5,
+                      delay: 1,
+                    },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transform: "translateY(-20px)",
+                    transition: {
+                      duration: 0.5,
+                      delay: 0.5,
+                    },
+                  }}
+                >
+                  Software Engineer
+                </MotionText>
+                <MotionButton
+                  key="button"
+                  mt="2"
+                  width={{ base: "100%", md: "min-content" }}
+                  variant="outline"
+                  initial={{ opacity: 0, transform: "translateY(-20px)" }}
+                  animate={{
+                    opacity: 1,
+                    transform: "translateY(0px)",
+                    transition: {
+                      duration: 0.5,
+                      delay: 1.5,
+                    },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transform: "translateY(-20px)",
+                    transition: {
+                      duration: 0.5,
+                      delay: 1,
+                    },
+                  }}
+                  onClick={() => {
+                    setPauseAnimation(true);
+                    router.prefetch("/home", { kind: PrefetchKind.FULL });
+                    setTimeout(() => router.push("/home"), 3000);
+                  }}
+                >
+                  Click here to explore <RiArrowRightLine />
+                </MotionButton>
+              </>
+            )}
+          </AnimatePresence>
+        </Box>
+        {/* Other content */}
+      </Container>
+    </Box>
   );
 }
