@@ -28,7 +28,9 @@ type Crater = {
 export const MoonEffect: React.FC = () => {
   const { windowHeight, navbarHeight } = useMobileWindowHeight();
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const scrollHeight = useRef(window.scrollY);
+  const scrollHeight = useRef(
+    typeof window === "undefined" ? 0 : window.scrollY
+  );
 
   const canvasSize = useRef<"base" | "sm" | "md" | "lg" | "xl" | "2xl">("base");
 
@@ -235,15 +237,6 @@ export const MoonEffect: React.FC = () => {
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = windowHeight;
-      // Chakra breakpoints
-      // const breakpoints = {
-      //   base: "0em", // 0px
-      //   sm: "30em", // ~480px
-      //   md: "48em", // ~768px
-      //   lg: "62em", // ~992px
-      //   xl: "80em", // ~1280px
-      //   "2xl": "96em", // ~1536px
-      // }
       canvasSize.current = (() => {
         if (window.innerWidth < 480) return "base";
         if (window.innerWidth < 768) return "sm";
@@ -260,7 +253,6 @@ export const MoonEffect: React.FC = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       const moonSize = 2000;
       const centerX = canvas.width / 2;
-      console.log(canvasSize.current);
 
       const [scrollSpeed, scaleSpeed] = (() => {
         switch (canvasSize.current) {
@@ -386,10 +378,9 @@ export const MoonEffect: React.FC = () => {
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      if (window.visualViewport) {
-        window.visualViewport.removeEventListener("resize", handleResize);
-        window.visualViewport.removeEventListener("scroll", handleResize);
-      }
+      if (!window.visualViewport) return;
+      window.visualViewport.removeEventListener("resize", handleResize);
+      window.visualViewport.removeEventListener("scroll", handleResize);
     };
   }, [navbarHeight, windowHeight]);
 

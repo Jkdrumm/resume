@@ -18,7 +18,7 @@ const SCALE = 3;
 const RESTITUTION = 1; // Perfectly elastic collision
 const MASS_VARIATION = 1;
 // Density of stars per 100dp^2
-const DENSITY = 0.01;
+const DENSITY = 1;
 const TWINKLE_SIZE = 2;
 const TWINKLE_CHANCE = 0.02;
 
@@ -28,20 +28,37 @@ export type StarFieldProps = {
 
 const StarField: React.FC<StarFieldProps> = ({ pauseAnimation }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const stars = useRef<Star[]>(
-    Array.from(
+  const stars = useRef<Star[]>([]);
+
+  const isMouseDown = useRef(false);
+  const mousePositon = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const handleResize = () => {
+      canvas.width = window?.innerWidth;
+      canvas.height = window?.innerHeight;
+    };
+
+    handleResize();
+
+    stars.current = Array.from(
       {
         length:
-          ((window?.innerHeight * window?.innerWidth) /
-            (window?.devicePixelRatio * 100)) *
+          ((canvasRef.current.width * canvasRef.current.height) / 1000) *
           DENSITY,
       },
       () => {
         const mass = Math.random() * MASS_VARIATION + 0.2;
         return {
           position: {
-            x: Math.random() * window?.innerWidth,
-            y: Math.random() * window?.innerHeight,
+            x: Math.random() * (canvasRef.current?.width ?? 1000),
+            y: Math.random() * (canvasRef.current?.height ?? 1000),
           },
           mass,
           size: Math.sqrt(mass / Math.PI) * SCALE,
@@ -55,18 +72,7 @@ const StarField: React.FC<StarFieldProps> = ({ pauseAnimation }) => {
           opacity: Math.random() * 0.5 + 0.5,
         };
       }
-    )
-  );
-
-  const isMouseDown = useRef(false);
-  const mousePositon = useRef({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas || !window) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
+    );
 
     canvas.width = window?.innerWidth;
     canvas.height = window?.innerHeight;
@@ -102,6 +108,7 @@ const StarField: React.FC<StarFieldProps> = ({ pauseAnimation }) => {
         star.position.x = constrainXToCanvas(star.position.x, canvas);
         star.position.y = constrainYToCanvas(star.position.y, canvas);
 
+        // Slow down stars for a smooth transition
         if (star.velocityReduction)
           if (star.velocityReduction * 1.02 < 1) star.velocityReduction *= 1.02;
           else star.velocityReduction = 1;
@@ -135,16 +142,11 @@ const StarField: React.FC<StarFieldProps> = ({ pauseAnimation }) => {
     const onMouseMove = (e: MouseEvent) => {
       mousePositon.current = { x: e.clientX, y: e.clientY };
     };
+
     window.addEventListener("mousedown", onMouseDown);
     window.addEventListener("mouseup", onMouseUp);
     window.addEventListener("mousemove", onMouseMove);
-
-    const handleResize = () => {
-      canvas.width = window?.innerWidth;
-      canvas.height = window?.innerHeight;
-    };
-
-    window?.addEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -163,8 +165,6 @@ const StarField: React.FC<StarFieldProps> = ({ pauseAnimation }) => {
       });
     }, 2000);
   }, [stars, pauseAnimation]);
-
-  if (!window) return null;
 
   return (
     <canvas
