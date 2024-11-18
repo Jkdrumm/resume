@@ -4,55 +4,39 @@ import {
   GridItem,
   Heading,
   SimpleGrid,
-  Stack,
   Text,
 } from "@chakra-ui/react";
-import { MdEmail } from "react-icons/md";
-import { FaLocationDot } from "react-icons/fa6";
-import { Link } from "@/components/compound/Link";
-import { TbWorldWww } from "react-icons/tb";
+import { Contacts } from "./sections/Contacts";
+import { Skills } from "./sections/Skills";
+import { Education } from "./sections/Education";
+import { Experience } from "./sections/Experience";
 
 export default function Resume() {
   return (
     <Flex justifyContent="center" my={12}>
       <Box w={850} borderRadius={4} overflow="hidden">
-        <Flex flexDir="column" justify="center" bg="green" p={6}>
+        <Flex
+          flexDir="column"
+          justify="center"
+          bg="yellow.500"
+          color="gray.950"
+          p={6}
+        >
           <Heading size="4xl">Joshua Drumm</Heading>
           <Text textStyle="xl">Software Engineer</Text>
         </Flex>
-        <SimpleGrid columns={[2, 4]}>
-          <GridItem colSpan={[1, 1]}>
-            <Box bg="red" p={4}>
-              <Heading size="lg" borderBottom="1px solid" mb={2}>
-                CONTACT
-              </Heading>
-              <Stack gap={2}>
-                <Link href="mailto:jkdrumm1@gmail.com">
-                  <Flex gap={1}>
-                    <MdEmail />
-                    <Text textStyle="xs">jkdrumm1@gmail.com</Text>
-                  </Flex>
-                </Link>
-                <Link
-                  href="https://maps.app.goo.gl/mGPAai6qqdC7jJTP7"
-                  isExternal
-                >
-                  <Flex gap={1}>
-                    <FaLocationDot />
-                    <Text textStyle="xs">Edmond, OK</Text>
-                  </Flex>
-                </Link>
-                <Link href="https://www.jkdrumm.com">
-                  <Flex gap={1}>
-                    <TbWorldWww />
-                    <Text textStyle="xs">www.jkdrumm.com</Text>
-                  </Flex>
-                </Link>
-              </Stack>
-            </Box>
+        <SimpleGrid columns={{ base: 1, sm: 4 }}>
+          <GridItem colSpan={1}>
+            <Flex flexDir="column" height="100%" bg="gray.700" p={4} gap={4}>
+              <Contacts />
+              <Skills />
+              <Education />
+            </Flex>
           </GridItem>
-          <GridItem colSpan={[1, 3]}>
-            <Box bg="blue">TEST</Box>
+          <GridItem colSpan={{ base: 1, sm: 3 }}>
+            <Flex flexDir="column" bg="gray.300" color="gray.950" p={4} gap={4}>
+              <Experience />
+            </Flex>
           </GridItem>
         </SimpleGrid>
       </Box>
