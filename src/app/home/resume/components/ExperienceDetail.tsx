@@ -1,4 +1,4 @@
-import { List, Stack, Text } from "@chakra-ui/react";
+import { Flex, type IconProps, List, Stack, Text } from "@chakra-ui/react";
 
 export type ExperiencDetailProps = {
   company: string;
@@ -7,6 +7,7 @@ export type ExperiencDetailProps = {
   endDate?: string;
   description: string;
   highlights: string[];
+  icon?: React.ComponentType<IconProps>;
 };
 
 export const ExperienceDetail: React.FC<ExperiencDetailProps> = ({
@@ -16,12 +17,16 @@ export const ExperienceDetail: React.FC<ExperiencDetailProps> = ({
   endDate,
   description,
   highlights,
+  icon: Icon,
 }) => {
   return (
     <Stack gap={1}>
-      <Text textStyle="lg" fontWeight="semibold">
-        {company}
-      </Text>
+      <Flex gap={1}>
+        {Icon && <Icon fontSize="1.5rem" alignSelf="center" />}
+        <Text textStyle="lg" fontWeight="semibold">
+          {company}
+        </Text>
+      </Flex>
       <Text textStyle="md" fontWeight="semibold">
         {title}
       </Text>

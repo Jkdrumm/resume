@@ -15,19 +15,17 @@ export const EducationDetail: React.FC<EducationDetailProps> = ({
   icon: Icon,
 }) => {
   return (
-    <Stack gap={1}>
+    <Stack gap={1} textAlign="center">
       {Icon && (
         <Icon
           fontSize="100px"
-          mb="-30px"
-          mt="-30px"
           alignSelf="center"
           overflow="hidden"
           clip="auto"
           color="gray.700"
         />
       )}
-      <Text textStyle="lg" fontWeight="semibold">
+      <Text textStyle={{ base: "lg", md: "sm" }} fontWeight="semibold">
         {name}
       </Text>
       {typeof description === "string" ? (

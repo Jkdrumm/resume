@@ -2,6 +2,9 @@ import React from "react";
 import { Section } from "../components/Section";
 import { FaBriefcase } from "react-icons/fa6";
 import { ExperienceDetail } from "../components/ExperienceDetail";
+import { PaycomIcon } from "@/components/icons/Paycom";
+import { AdyptationIcon } from "@/components/icons/Adyptation";
+import { IndigoTechGroupIcon } from "@/components/icons/IndigoTechGroup";
 
 export const Experience: React.FC = () => {
   return (
@@ -9,6 +12,7 @@ export const Experience: React.FC = () => {
       <ExperienceDetail
         company="Indigo Tech"
         title="Technical Lead"
+        icon={IndigoTechGroupIcon}
         startDate="Feb 2022"
         description="Front-end focused full stack development with React, TS, Node.js, TypeORM, and Redis deployed in AWS"
         highlights={[
@@ -29,6 +33,7 @@ export const Experience: React.FC = () => {
       <ExperienceDetail
         company="Adyptation"
         title="Software Engineer"
+        icon={AdyptationIcon}
         startDate="Jan 2022"
         endDate="Feb 2023"
         description="Lead web developer - Full stack development with React, Next.js, Node.js, React Native, GraphQL, Python, and Auth0"
@@ -47,6 +52,7 @@ export const Experience: React.FC = () => {
       <ExperienceDetail
         company="Paycom"
         title="Software Developer"
+        icon={PaycomIcon}
         startDate="Sep 2020"
         endDate="Dec 2021"
         description="Full stack web development with React, PHP, and MySQL. Refactored, redesigned, and optimized web pages for a better user experience"

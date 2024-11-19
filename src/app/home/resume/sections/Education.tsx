@@ -3,6 +3,7 @@ import { Section } from "../components/Section";
 import { EducationDetail } from "../components/EducationDetail";
 import { FaGraduationCap } from "react-icons/fa6";
 import { ASUIcon } from "@/components/icons/ASU";
+import { UCOIcon } from "@/components/icons/UCO";
 
 export const Education: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const Education: React.FC = () => {
           "Summa Cum Laude",
         ]}
         date="2018 - 2020"
+        icon={UCOIcon}
       />
     </Section>
   );

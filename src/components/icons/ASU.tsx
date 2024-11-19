@@ -17,4 +17,7 @@ export const ASUIcon = createIcon({
       />
     </>
   ),
+  defaultProps: {
+    my: "-20px",
+  },
 });
