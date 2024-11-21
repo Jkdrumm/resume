@@ -8,7 +8,7 @@ export const TypeScript: React.FC<SkillListItemProps> = (props) => {
   return (
     <SkillUsedDetail
       name="TypeScript"
-      description="Chakra UI is a component system for building products with speed."
+      description="TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale."
       icon={<SiTypescript />}
       colorIcon={ChakraColorIcon}
       href="https://www.typescriptlang.org/"
