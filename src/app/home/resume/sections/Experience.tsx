@@ -14,6 +14,9 @@ import { TypeScript } from "../skills/TypeScript";
 import { JavaScript } from "../skills/JavaScript";
 import { GraphQL } from "../skills/GraphQL";
 import { NodeJS } from "../skills/NodeJS";
+import { AntDesign } from "../skills/AntDesign";
+import { AgGrid } from "../skills/AgGrid";
+import { Python } from "../skills/Python";
 
 export const Experience: React.FC = () => {
   return (
@@ -38,7 +41,7 @@ export const Experience: React.FC = () => {
           "Mentored new hires, fostering a knowledge-sharing culture and supporting professional growth across the team",
           "DRI for different app areas (Retail Products, MainUX) creating documentation and specializing in understanding how the business logic translates to the app logic",
         ]}
-        skills={[ReactSkill]}
+        skills={[ReactSkill, TypeScript, AntDesign, AgGrid, NodeJS]}
       />
       <ExperienceDetail
         company="Adyptation"
@@ -66,6 +69,7 @@ export const Experience: React.FC = () => {
           TanStackQuery,
           NodeJS,
           GraphQL,
+          Python,
           ReactNative,
           JavaScript,
         ]}

@@ -7,14 +7,14 @@ import {
   HoverCardRoot,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { Center, Icon, IconProps, Stack, Text } from "@chakra-ui/react";
+import { Box, Center, Icon, IconProps, Stack, Text } from "@chakra-ui/react";
 import { LuExternalLink } from "react-icons/lu";
 import { SkillListItemProps } from "./SkillList";
 import { useEffect, useState } from "react";
 
 export type SkillUsedDetailProps = {
   name: string;
-  description: string;
+  description: string | React.ReactNode;
   icon: React.ReactNode;
   colorIcon: React.ComponentType<IconProps>;
   href: LinkProps["href"];
@@ -74,9 +74,15 @@ export const SkillUsedDetail: React.FC<SkillUsedDetailProps> = ({
                 </Text>
                 <LuExternalLink />
               </Link>
-              <Text textStyle="sm" color="fg.muted">
-                {description}
-              </Text>
+              {typeof description === "string" ? (
+                <Text textStyle="sm" color="fg.muted">
+                  {description}
+                </Text>
+              ) : (
+                <Box textStyle="sm" color="fg.muted">
+                  {description}
+                </Box>
+              )}
             </Stack>
           </Stack>
         </Stack>
