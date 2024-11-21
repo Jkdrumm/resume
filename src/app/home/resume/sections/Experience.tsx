@@ -5,10 +5,16 @@ import { ExperienceDetail } from "../components/ExperienceDetail";
 import { PaycomIcon } from "@/components/icons/Paycom";
 import { AdyptationIcon } from "@/components/icons/Adyptation";
 import { IndigoTechGroupIcon } from "@/components/icons/IndigoTechGroup";
+import { ChakraUI } from "../skills/ChakraUI";
+import { NextJS } from "../skills/NextJS";
+import { ReactSkill } from "../skills/React";
+import { TanStackQuery } from "../skills/TanStackQuery";
+import { ReactNative } from "../skills/ReactNative";
+import { TypeScript } from "../skills/TypeScript";
 
 export const Experience: React.FC = () => {
   return (
-    <Section title="EXPERIENCE" icon={<FaBriefcase />}>
+    <Section title="EXPERIENCE" icon={<FaBriefcase />} gap={8}>
       <ExperienceDetail
         company="Indigo Tech"
         title="Technical Lead"
@@ -29,6 +35,7 @@ export const Experience: React.FC = () => {
           "Mentored new hires, fostering a knowledge-sharing culture and supporting professional growth across the team",
           "DRI for different app areas (Retail Products, MainUX) creating documentation and specializing in understanding how the business logic translates to the app logic",
         ]}
+        skills={[ReactSkill]}
       />
       <ExperienceDetail
         company="Adyptation"
@@ -47,6 +54,14 @@ export const Experience: React.FC = () => {
           "Implemented custom animations using Framer Motion to add polishing touches",
           "Rigorous unit testing to ensure stability (100% coverage)",
           "Added new features including walkthroughs describing new features and several new forms for user settings and data collection",
+        ]}
+        skills={[
+          ReactSkill,
+          TypeScript,
+          ChakraUI,
+          NextJS,
+          TanStackQuery,
+          ReactNative,
         ]}
       />
       <ExperienceDetail

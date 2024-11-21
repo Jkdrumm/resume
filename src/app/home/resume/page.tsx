@@ -10,11 +10,26 @@ import { Contacts } from "./sections/Contacts";
 import { Skills } from "./sections/Skills";
 import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
+import { ChakraColorIcon } from "@/components/icons/ChakraColor";
+import { NextColorIcon } from "@/components/icons/NextColor";
+import { ReactColorIcon } from "@/components/icons/ReactColor";
 
 export default function Resume() {
   return (
     <Flex justifyContent="center" my={12}>
-      <Box w={850} borderRadius={4} overflow="hidden">
+      {/* For some reason, the icons are not appearing in the hover cards correctly unless also rendered on the page
+          So we render them here, but make them invisible and take up no space */}
+      <Box opacity={0} w={0} h={0}>
+        <ChakraColorIcon />
+        <NextColorIcon />
+        <ReactColorIcon />
+      </Box>
+      <Box
+        w={850}
+        borderRadius={4}
+        overflow="hidden"
+        boxShadow={{ base: "md", md: "2xl" }}
+      >
         <Flex
           flexDir="column"
           justify="center"

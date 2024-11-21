@@ -33,16 +33,14 @@ export const Contacts = () => {
         label="(405) 628-2034"
       />
       <ContactDetail
-        href="https://www.linkedin.com/in/joshua-drumm-877161198/"
-        isExternal
+        href="https://www.linkedin.com/in/jkdrumm/"
         icon={<SiLinkedin />}
-        label="LinkedIn"
+        label="@Jkdrumm"
       />
       <ContactDetail
         href="https://github.com/Jkdrumm"
-        isExternal
         icon={<SiGithub />}
-        label="GitHub"
+        label="@Jkdrumm"
       />
     </Section>
   );
