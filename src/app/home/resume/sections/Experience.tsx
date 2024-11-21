@@ -11,6 +11,9 @@ import { ReactSkill } from "../skills/React";
 import { TanStackQuery } from "../skills/TanStackQuery";
 import { ReactNative } from "../skills/ReactNative";
 import { TypeScript } from "../skills/TypeScript";
+import { JavaScript } from "../skills/JavaScript";
+import { GraphQL } from "../skills/GraphQL";
+import { NodeJS } from "../skills/NodeJS";
 
 export const Experience: React.FC = () => {
   return (
@@ -61,7 +64,10 @@ export const Experience: React.FC = () => {
           ChakraUI,
           NextJS,
           TanStackQuery,
+          NodeJS,
+          GraphQL,
           ReactNative,
+          JavaScript,
         ]}
       />
       <ExperienceDetail

@@ -62,7 +62,7 @@ export const SkillUsedDetail: React.FC<SkillUsedDetailProps> = ({
           </Icon>
         </Center>
       </HoverCardTrigger>
-      <HoverCardContent>
+      <HoverCardContent p={4}>
         <HoverCardArrow />
         <Stack gap="4" direction="row">
           <ColorIcon fontSize="40px" />
