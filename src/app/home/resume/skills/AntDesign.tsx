@@ -2,7 +2,7 @@
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SkillListItemProps } from "../components/SkillList";
 import { SiAntdesign } from "react-icons/si";
-import { AntDesignColorIcon } from "@/components/icons/AntDesignColor";
+import { AntDesignColorIcon } from "@/components/icons/AntDesignColorIcon";
 
 export const AntDesign: React.FC<SkillListItemProps> = (props) => {
   return (

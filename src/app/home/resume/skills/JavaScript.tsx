@@ -2,7 +2,7 @@
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiJavascript } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";
-import { JavaScriptColorIcon } from "@/components/icons/JavaScriptColor";
+import { JavaScriptColorIcon } from "@/components/icons/JavaScriptColorIcon";
 
 export const JavaScript: React.FC<SkillListItemProps> = (props) => {
   return (

@@ -1,5 +1,5 @@
 "use client";
-import { TanStackColorIcon } from "@/components/icons/TanStackColor";
+import { TanStackColorIcon } from "@/components/icons/TanStackColorIcon";
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiReactquery } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";

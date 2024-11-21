@@ -1,5 +1,5 @@
 "use client";
-import { ReactColorIcon } from "@/components/icons/ReactColor";
+import { ReactColorIcon } from "@/components/icons/ReactColorIcon";
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiReact } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";

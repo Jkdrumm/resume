@@ -1,5 +1,5 @@
 "use client";
-import { NextColorIcon } from "@/components/icons/NextColor";
+import { NextColorIcon } from "@/components/icons/NextColorIcon";
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiNextdotjs } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";

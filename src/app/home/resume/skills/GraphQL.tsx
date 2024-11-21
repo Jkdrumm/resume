@@ -2,7 +2,7 @@
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiGraphql } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";
-import { GraphQLColorIcon } from "@/components/icons/GraphQLColor";
+import { GraphQLColorIcon } from "@/components/icons/GraphQLColorIcon";
 
 export const GraphQL: React.FC<SkillListItemProps> = (props) => {
   return (

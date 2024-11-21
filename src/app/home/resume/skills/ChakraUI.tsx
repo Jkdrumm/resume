@@ -1,7 +1,7 @@
 "use client";
-import { ChakraColorIcon } from "@/components/icons/ChakraColor";
+import { ChakraColorIcon } from "@/components/icons/ChakraColorIcon";
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
-import { ChakraIcon } from "@/components/icons/Chakra";
+import { ChakraIcon } from "@/components/icons/ChakraIcon";
 import { SkillListItemProps } from "../components/SkillList";
 
 export const ChakraUI: React.FC<SkillListItemProps> = (props) => {

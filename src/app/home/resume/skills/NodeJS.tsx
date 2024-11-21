@@ -2,7 +2,7 @@
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiNodedotjs } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";
-import { NodeJSColor } from "@/components/icons/NodeJSColor";
+import { NodeJSColor } from "@/components/icons/NodeJSColorIcon";
 
 export const NodeJS: React.FC<SkillListItemProps> = (props) => {
   return (

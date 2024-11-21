@@ -2,9 +2,9 @@ import React from "react";
 import { Section } from "../components/Section";
 import { FaBriefcase } from "react-icons/fa6";
 import { ExperienceDetail } from "../components/ExperienceDetail";
-import { PaycomIcon } from "@/components/icons/Paycom";
-import { AdyptationIcon } from "@/components/icons/Adyptation";
-import { IndigoTechGroupIcon } from "@/components/icons/IndigoTechGroup";
+import { PaycomIcon } from "@/components/icons/PaycomIcon";
+import { AdyptationIcon } from "@/components/icons/AdyptationIcon";
+import { IndigoTechGroupIcon } from "@/components/icons/IndigoTechGroupIcon";
 import { ChakraUI } from "../skills/ChakraUI";
 import { NextJS } from "../skills/NextJS";
 import { ReactSkill } from "../skills/React";
@@ -17,6 +17,20 @@ import { NodeJS } from "../skills/NodeJS";
 import { AntDesign } from "../skills/AntDesign";
 import { AgGrid } from "../skills/AgGrid";
 import { Python } from "../skills/Python";
+import { PHP } from "../skills/PHP";
+import { MySQL } from "../skills/MySQL";
+import { SwaggerUI } from "../skills/SwaggerUI";
+import { Webpack } from "../skills/Webpack";
+import { SWR } from "../skills/SWR";
+import { SyncFusion } from "../skills/SyncFusion";
+import { ReactI18Next } from "../skills/ReactI18Next";
+import { Jest } from "../skills/Jest";
+import { LaunchDarkly } from "../skills/LaunchDarkly";
+import { Vercel } from "../skills/Vercel";
+import { AWS } from "../skills/AWS";
+import { Postgres } from "../skills/Postgres";
+import { NestJS } from "../skills/NestJS";
+import { TypeORM } from "../skills/TypeORM";
 
 export const Experience: React.FC = () => {
   return (
@@ -41,7 +55,23 @@ export const Experience: React.FC = () => {
           "Mentored new hires, fostering a knowledge-sharing culture and supporting professional growth across the team",
           "DRI for different app areas (Retail Products, MainUX) creating documentation and specializing in understanding how the business logic translates to the app logic",
         ]}
-        skills={[ReactSkill, TypeScript, AntDesign, AgGrid, NodeJS]}
+        skills={[
+          ReactSkill,
+          TypeScript,
+          AntDesign,
+          SWR,
+          AgGrid,
+          SyncFusion,
+          Webpack,
+          Jest,
+          NodeJS,
+          ReactI18Next,
+          LaunchDarkly,
+          NestJS,
+          Postgres,
+          TypeORM,
+          AWS,
+        ]}
       />
       <ExperienceDetail
         company="Adyptation"
@@ -67,8 +97,11 @@ export const Experience: React.FC = () => {
           ChakraUI,
           NextJS,
           TanStackQuery,
+          Jest,
+          Vercel,
           NodeJS,
           GraphQL,
+          Webpack,
           Python,
           ReactNative,
           JavaScript,
@@ -90,6 +123,16 @@ export const Experience: React.FC = () => {
           "Collaborated to implement single and batch employee changes to scale",
           "Improved UI and stability by adding unit tests and enhancing functionality",
           "Utilized Swagger UI to ensure proper integration between the front and back ends",
+        ]}
+        skills={[
+          ReactSkill,
+          JavaScript,
+          PHP,
+          TypeScript,
+          MySQL,
+          Jest,
+          SwaggerUI,
+          ReactI18Next,
         ]}
       />
     </Section>

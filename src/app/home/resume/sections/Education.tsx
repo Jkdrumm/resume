@@ -2,8 +2,8 @@ import React from "react";
 import { Section } from "../components/Section";
 import { EducationDetail } from "../components/EducationDetail";
 import { FaGraduationCap } from "react-icons/fa6";
-import { ASUIcon } from "@/components/icons/ASU";
-import { UCOIcon } from "@/components/icons/UCO";
+import { ASUIcon } from "@/components/icons/ASUIcon";
+import { UCOIcon } from "@/components/icons/UCOIcon";
 
 export const Education: React.FC = () => {
   return (

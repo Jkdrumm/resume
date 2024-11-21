@@ -2,7 +2,7 @@
 import { SkillUsedDetail } from "../components/SkillUsedDetail";
 import { SiTypescript } from "react-icons/si";
 import { SkillListItemProps } from "../components/SkillList";
-import { TypeScriptColorIcon } from "@/components/icons/TypeScriptColor";
+import { TypeScriptColorIcon } from "@/components/icons/TypeScriptColorIcon";
 
 export const TypeScript: React.FC<SkillListItemProps> = (props) => {
   return (

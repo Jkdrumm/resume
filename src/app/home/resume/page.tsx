@@ -10,9 +10,9 @@ import { Contacts } from "./sections/Contacts";
 import { Skills } from "./sections/Skills";
 import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
-import { ChakraColorIcon } from "@/components/icons/ChakraColor";
-import { NextColorIcon } from "@/components/icons/NextColor";
-import { ReactColorIcon } from "@/components/icons/ReactColor";
+import { ChakraColorIcon } from "@/components/icons/ChakraColorIcon";
+import { NextColorIcon } from "@/components/icons/NextColorIcon";
+import { ReactColorIcon } from "@/components/icons/ReactColorIcon";
 
 export default function Resume() {
   return (
