@@ -1,5 +1,5 @@
 "use client";
-import { HStack } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 export type SkillListItemProps = {
@@ -15,17 +15,19 @@ export type SkillListProps = {
 export const SkillList: React.FC<SkillListProps> = ({ skills }) => {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   return (
-    <HStack gap={0.5}>
-      {skills.map((Skill, i) => (
-        <Skill
-          key={i.toString()}
-          onMouseEnter={setHoveredSkill}
-          onMouseLeave={(skill) =>
-            setHoveredSkill((prev) => (prev === skill ? null : prev))
-          }
-          hoveredSkill={hoveredSkill}
-        />
-      ))}
-    </HStack>
+    <Box flex="1" justifyItems={{ base: "flex-start", md: "flex-end" }}>
+      <Flex direction="row" gap={0.5} wrap="wrap" justifyContent="flex-end">
+        {skills.map((Skill, i) => (
+          <Skill
+            key={i.toString()}
+            onMouseEnter={setHoveredSkill}
+            onMouseLeave={(skill) =>
+              setHoveredSkill((prev) => (prev === skill ? null : prev))
+            }
+            hoveredSkill={hoveredSkill}
+          />
+        ))}
+      </Flex>
+    </Box>
   );
 };

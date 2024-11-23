@@ -31,6 +31,8 @@ import { AWS } from "../skills/AWS";
 import { Postgres } from "../skills/Postgres";
 import { NestJS } from "../skills/NestJS";
 import { TypeORM } from "../skills/TypeORM";
+import { Redis } from "../skills/Redis";
+import { Motion } from "../skills/Motion";
 
 export const Experience: React.FC = () => {
   return (
@@ -67,9 +69,11 @@ export const Experience: React.FC = () => {
           NodeJS,
           ReactI18Next,
           LaunchDarkly,
+          Motion,
           NestJS,
           Postgres,
           TypeORM,
+          Redis,
           AWS,
         ]}
       />
@@ -98,13 +102,14 @@ export const Experience: React.FC = () => {
           NextJS,
           TanStackQuery,
           Jest,
-          Vercel,
+          Motion,
           NodeJS,
           GraphQL,
           Webpack,
           Python,
           ReactNative,
           JavaScript,
+          Vercel,
         ]}
       />
       <ExperienceDetail
@@ -119,7 +124,7 @@ export const Experience: React.FC = () => {
           "Integrated the use of mobile check scanning",
           "Achieved pixel-perfect design for seamless user experience",
           "Coordinated and documented a plan of implementation",
-          "Reduced API traffic in the Form 1 Redesign project by 30% through optimization",
+          "Reduced API traffic in the Form 1 Redesign project by 30%",
           "Collaborated to implement single and batch employee changes to scale",
           "Improved UI and stability by adding unit tests and enhancing functionality",
           "Utilized Swagger UI to ensure proper integration between the front and back ends",

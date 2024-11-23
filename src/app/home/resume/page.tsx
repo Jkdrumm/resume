@@ -10,20 +10,12 @@ import { Contacts } from "./sections/Contacts";
 import { Skills } from "./sections/Skills";
 import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
-import { ChakraColorIcon } from "@/components/icons/ChakraColorIcon";
-import { NextColorIcon } from "@/components/icons/NextColorIcon";
-import { ReactColorIcon } from "@/components/icons/ReactColorIcon";
+import { Projects } from "./sections/Projects";
+import { Extras } from "./sections/Extras";
 
 export default function Resume() {
   return (
     <Flex justifyContent="center" my={12}>
-      {/* For some reason, the icons are not appearing in the hover cards correctly unless also rendered on the page
-          So we render them here, but make them invisible and take up no space */}
-      <Box opacity={0} w={0} h={0}>
-        <ChakraColorIcon />
-        <NextColorIcon />
-        <ReactColorIcon />
-      </Box>
       <Box
         w={850}
         borderRadius={4}
@@ -46,11 +38,14 @@ export default function Resume() {
               <Contacts />
               <Skills />
               <Education />
+              <Extras display={{ base: "none", md: "inherit" }} />
             </Flex>
           </GridItem>
           <GridItem colSpan={{ base: 1, md: 3 }}>
-            <Flex flexDir="column" bg="gray.300" color="gray.950" p={4} gap={4}>
+            <Flex flexDir="column" bg="gray.300" color="gray.950" p={4} gap={6}>
               <Experience />
+              <Projects />
+              <Extras display={{ base: "inherit", md: "none" }} />
             </Flex>
           </GridItem>
         </SimpleGrid>

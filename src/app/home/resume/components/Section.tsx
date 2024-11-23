@@ -14,7 +14,7 @@ export const Section: React.FC<SectionProps> = ({
   ...rest
 }) => {
   return (
-    <Stack>
+    <Stack w="100%">
       <Flex gap={1} borderBottom="1px solid" mb={2} align="center">
         {icon && <Icon fontSize="1.125rem">{icon}</Icon>}
         <Heading size="lg">{title}</Heading>

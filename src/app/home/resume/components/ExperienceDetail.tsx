@@ -25,18 +25,18 @@ export const ExperienceDetail: React.FC<ExperiencDetailProps> = ({
 }) => {
   return (
     <Stack gap={1}>
-      <Flex justify="space-between">
-        <Stack>
-          <Flex gap={1}>
-            {Icon && <Icon fontSize="1.5rem" alignSelf="center" />}
-            <Text textStyle="lg" fontWeight="semibold">
-              {company}
+      <Stack>
+        <Flex justify="space-between" flexDir="row" gap={1}>
+          <Flex gap={1} flexDir="column">
+            <Flex gap={1}>
+              {Icon && <Icon fontSize="1.5rem" alignSelf="center" />}
+              <Text textStyle="lg" fontWeight="semibold">
+                {company}
+              </Text>
+            </Flex>
+            <Text textStyle="md" fontWeight="semibold">
+              {title}
             </Text>
-          </Flex>
-          <Text textStyle="md" fontWeight="semibold">
-            {title}
-          </Text>
-          <Flex>
             <Flex gap={1}>
               <FaCalendarDays size="1rem" />
               <Text textStyle="sm">
@@ -44,9 +44,9 @@ export const ExperienceDetail: React.FC<ExperiencDetailProps> = ({
               </Text>
             </Flex>
           </Flex>
-        </Stack>
-        {skills && <SkillList skills={skills} />}
-      </Flex>
+          {skills && <SkillList skills={skills} />}
+        </Flex>
+      </Stack>
       <Text textStyle="sm">{description}</Text>
       <List.Root>
         {highlights.map((d) => (

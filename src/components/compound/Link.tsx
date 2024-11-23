@@ -19,10 +19,8 @@ export const Link: React.FC<LinkProps> = ({
     ? { rel: "noopener noreferrer", target: "_blank" }
     : {};
   return (
-    <ChakraLink asChild {...props}>
-      <NextLink href={href} {...withExternal}>
-        {children}
-      </NextLink>
+    <ChakraLink as={NextLink} href={href} {...withExternal} {...props}>
+      {children}
     </ChakraLink>
   );
 };
