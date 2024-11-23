@@ -15,12 +15,12 @@ export const TanStackColorIcon = createIcon({
         gradientUnits="userSpaceOnUse"
         id="a-cl-9"
       >
-        <stop stopColor="#6BDAFF" offset="0"></stop>
-        <stop stopColor="#F9FFB5" offset=".32"></stop>
-        <stop stopColor="#FFA770" offset=".71"></stop>
-        <stop stopColor="#FF7373" offset="1"></stop>
+        <stop stopColor="#6BDAFF" offset="0" />
+        <stop stopColor="#F9FFB5" offset=".32" />
+        <stop stopColor="#FFA770" offset=".71" />
+        <stop stopColor="#FF7373" offset="1" />
       </linearGradient>
-      <circle cx="316.5" cy="316.5" r="316.5" fill="url(#a-cl-9)"></circle>
+      <circle cx="316.5" cy="316.5" r="316.5" fill="url(#a-cl-9)" />
       <defs>
         <filter
           x="-137.5"
@@ -30,7 +30,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="am-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -42,7 +42,7 @@ export const TanStackColorIcon = createIcon({
         id="b-cl-9"
       >
         <g filter="url(#am-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#b-cl-9)">
@@ -54,7 +54,7 @@ export const TanStackColorIcon = createIcon({
           fill="#015064"
           stroke="#00CFE2"
           strokeWidth="25"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -65,7 +65,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="ah-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -77,7 +77,7 @@ export const TanStackColorIcon = createIcon({
         id="k-cl-9"
       >
         <g filter="url(#ah-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#k-cl-9)">
@@ -89,7 +89,7 @@ export const TanStackColorIcon = createIcon({
           fill="#015064"
           stroke="#00CFE2"
           strokeWidth="25"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -100,7 +100,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="ae-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -112,7 +112,7 @@ export const TanStackColorIcon = createIcon({
         id="j-cl-9"
       >
         <g filter="url(#ae-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#j-cl-9)">
@@ -124,7 +124,7 @@ export const TanStackColorIcon = createIcon({
           fill="#015064"
           stroke="#00A8B8"
           strokeWidth="25"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -135,7 +135,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="ai-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -147,7 +147,7 @@ export const TanStackColorIcon = createIcon({
         id="i-cl-9"
       >
         <g filter="url(#ai-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#i-cl-9)">
@@ -159,7 +159,7 @@ export const TanStackColorIcon = createIcon({
           fill="#015064"
           stroke="#00A8B8"
           strokeWidth="25"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -170,7 +170,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="aj-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -182,7 +182,7 @@ export const TanStackColorIcon = createIcon({
         id="h-cl-9"
       >
         <g filter="url(#aj-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#h-cl-9)">
@@ -194,7 +194,7 @@ export const TanStackColorIcon = createIcon({
           fill="#015064"
           stroke="#007782"
           strokeWidth="25"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -205,7 +205,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="ag-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -217,7 +217,7 @@ export const TanStackColorIcon = createIcon({
         id="g-cl-9"
       >
         <g filter="url(#ag-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#g-cl-9)">
@@ -229,7 +229,7 @@ export const TanStackColorIcon = createIcon({
           fill="#015064"
           stroke="#007782"
           strokeWidth="25"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -240,7 +240,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="af-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -252,7 +252,7 @@ export const TanStackColorIcon = createIcon({
         id="f-cl-9"
       >
         <g filter="url(#af-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#f-cl-9)">
@@ -266,7 +266,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="11"
-        ></line>
+        />
         <line
           x1="291"
           x2="280"
@@ -277,7 +277,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="11"
-        ></line>
+        />
         <line
           x1="332.9"
           x2="328.6"
@@ -288,7 +288,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="11"
-        ></line>
+        />
         <linearGradient
           x1="-670.75"
           x2="-671.59"
@@ -298,15 +298,15 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="m-cl-9"
         >
-          <stop stopColor="#EE2700" offset="0"></stop>
-          <stop stopColor="#FF008E" offset="1"></stop>
+          <stop stopColor="#EE2700" offset="0" />
+          <stop stopColor="#FF008E" offset="1" />
         </linearGradient>
         <path
           d="m344.1 363 97.7 17.2c5.8 2.1 8.2 6.1 7.1 12.1s-4.7 9.2-11 9.9l-106-18.7-57.5-59.2c-3.2-4.8-2.9-9.1 0.8-12.8s8.3-4.4 13.7-2.1l55.2 53.6z"
           clipRule="evenodd"
           fillRule="evenodd"
           fill="url(#m-cl-9)"
-        ></path>
+        />
         <line
           x1="428.2"
           x2="429.1"
@@ -317,7 +317,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="7"
-        ></line>
+        />
         <line
           x1="395.2"
           x2="396.1"
@@ -328,7 +328,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="7"
-        ></line>
+        />
         <line
           x1="362.2"
           x2="363.1"
@@ -339,7 +339,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="7"
-        ></line>
+        />
         <line
           x1="324.2"
           x2="328.4"
@@ -350,7 +350,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="7"
-        ></line>
+        />
         <line
           x1="303.2"
           x2="307.4"
@@ -361,7 +361,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinecap="round"
           strokeLinejoin="bevel"
           strokeWidth="7"
-        ></line>
+        />
       </g>
       <defs>
         <filter
@@ -372,7 +372,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="ak-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -384,7 +384,7 @@ export const TanStackColorIcon = createIcon({
         id="e-cl-9"
       >
         <g filter="url(#ak-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#e-cl-9)">
@@ -397,15 +397,15 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="n-cl-9"
         >
-          <stop stopColor="#A17500" offset="0"></stop>
-          <stop stopColor="#5D2100" offset="1"></stop>
+          <stop stopColor="#A17500" offset="0" />
+          <stop stopColor="#5D2100" offset="1" />
         </linearGradient>
         <path
           d="m192.3 203c8.1 37.3 14 73.6 17.8 109.1 3.8 35.4 2.8 75.1-3 119.2l61.2-16.7c-15.6-59-25.2-97.9-28.6-116.6s-10.8-51.9-22.1-99.6l-25.3 4.6"
           clipRule="evenodd"
           fillRule="evenodd"
           fill="url(#n-cl-9)"
-        ></path>
+        />
         <g stroke="#2F8A00">
           <linearGradient
             x1="-660.23"
@@ -416,8 +416,8 @@ export const TanStackColorIcon = createIcon({
             gradientUnits="userSpaceOnUse"
             id="r-cl-9"
           >
-            <stop stopColor="#2F8A00" offset="0"></stop>
-            <stop stopColor="#90FF57" offset="1"></stop>
+            <stop stopColor="#2F8A00" offset="0" />
+            <stop stopColor="#90FF57" offset="1" />
           </linearGradient>
           <path
             d="m195 183.9s-12.6-22.1-36.5-29.9c-15.9-5.2-34.4-1.5-55.5 11.1 15.9 14.3 29.5 22.6 40.7 24.9 16.8 3.6 51.3-6.1 51.3-6.1z"
@@ -425,7 +425,7 @@ export const TanStackColorIcon = createIcon({
             fillRule="evenodd"
             strokeWidth="13"
             fill="url(#r-cl-9)"
-          ></path>
+          />
           <linearGradient
             x1="-661.36"
             x2="-661.36"
@@ -435,8 +435,8 @@ export const TanStackColorIcon = createIcon({
             gradientUnits="userSpaceOnUse"
             id="s-cl-9"
           >
-            <stop stopColor="#2F8A00" offset="0"></stop>
-            <stop stopColor="#90FF57" offset="1"></stop>
+            <stop stopColor="#2F8A00" offset="0" />
+            <stop stopColor="#90FF57" offset="1" />
           </linearGradient>
           <path
             d="m194.9 184.5s-47.5-8.5-83.2 15.7c-23.8 16.2-34.3 49.3-31.6 99.4 30.3-27.8 52.1-48.5 65.2-61.9 19.8-20.2 49.6-53.2 49.6-53.2z"
@@ -444,7 +444,7 @@ export const TanStackColorIcon = createIcon({
             fillRule="evenodd"
             strokeWidth="13"
             fill="url(#s-cl-9)"
-          ></path>
+          />
           <linearGradient
             x1="-656.79"
             x2="-656.79"
@@ -454,8 +454,8 @@ export const TanStackColorIcon = createIcon({
             gradientUnits="userSpaceOnUse"
             id="q-cl-9"
           >
-            <stop stopColor="#2F8A00" offset="0"></stop>
-            <stop stopColor="#90FF57" offset="1"></stop>
+            <stop stopColor="#2F8A00" offset="0" />
+            <stop stopColor="#90FF57" offset="1" />
           </linearGradient>
           <path
             d="m195 183.9c-0.8-21.9 6-38 20.6-48.2s29.8-15.4 45.5-15.3c-6.1 21.4-14.5 35.8-25.2 43.4s-24.4 14.2-40.9 20.1z"
@@ -463,7 +463,7 @@ export const TanStackColorIcon = createIcon({
             fillRule="evenodd"
             strokeWidth="13"
             fill="url(#q-cl-9)"
-          ></path>
+          />
           <linearGradient
             x1="-663.07"
             x2="-663.07"
@@ -473,8 +473,8 @@ export const TanStackColorIcon = createIcon({
             gradientUnits="userSpaceOnUse"
             id="p-cl-9"
           >
-            <stop stopColor="#2F8A00" offset="0"></stop>
-            <stop stopColor="#90FF57" offset="1"></stop>
+            <stop stopColor="#2F8A00" offset="0" />
+            <stop stopColor="#90FF57" offset="1" />
           </linearGradient>
           <path
             d="m194.9 184.5c31.9-30 64.1-39.7 96.7-29s50.8 30.4 54.6 59.1c-35.2-5.5-60.4-9.6-75.8-12.1-15.3-2.6-40.5-8.6-75.5-18z"
@@ -482,7 +482,7 @@ export const TanStackColorIcon = createIcon({
             fillRule="evenodd"
             strokeWidth="13"
             fill="url(#p-cl-9)"
-          ></path>
+          />
           <linearGradient
             x1="-662.57"
             x2="-662.57"
@@ -492,8 +492,8 @@ export const TanStackColorIcon = createIcon({
             gradientUnits="userSpaceOnUse"
             id="o-cl-9"
           >
-            <stop stopColor="#2F8A00" offset="0"></stop>
-            <stop stopColor="#90FF57" offset="1"></stop>
+            <stop stopColor="#2F8A00" offset="0" />
+            <stop stopColor="#90FF57" offset="1" />
           </linearGradient>
           <path
             d="m194.9 184.5c35.8-7.6 65.6-0.2 89.2 22s37.7 49 42.3 80.3c-39.8-9.7-68.3-23.8-85.5-42.4s-32.5-38.5-46-59.9z"
@@ -501,7 +501,7 @@ export const TanStackColorIcon = createIcon({
             fillRule="evenodd"
             strokeWidth="13"
             fill="url(#o-cl-9)"
-          ></path>
+          />
           <linearGradient
             x1="-656.43"
             x2="-656.43"
@@ -511,8 +511,8 @@ export const TanStackColorIcon = createIcon({
             gradientUnits="userSpaceOnUse"
             id="l-cl-9"
           >
-            <stop stopColor="#2F8A00" offset="0"></stop>
-            <stop stopColor="#90FF57" offset="1"></stop>
+            <stop stopColor="#2F8A00" offset="0" />
+            <stop stopColor="#90FF57" offset="1" />
           </linearGradient>
           <path
             d="m194.9 184.5c-33.6 13.8-53.6 35.7-60.1 65.6s-3.6 63.1 8.7 99.6c27.4-40.3 43.2-69.6 47.4-88s5.6-44.1 4-77.2z"
@@ -520,31 +520,31 @@ export const TanStackColorIcon = createIcon({
             fillRule="evenodd"
             strokeWidth="13"
             fill="url(#l-cl-9)"
-          ></path>
+          />
           <path
             d="m196.5 182.3c-14.8 21.6-25.1 41.4-30.8 59.4s-9.5 33-11.1 45.1"
             fill="none"
             strokeLinecap="round"
             strokeWidth="8"
-          ></path>
+          />
           <path
             d="m194.9 185.7c-24.4 1.7-43.8 9-58.1 21.8s-24.7 25.4-31.3 37.8"
             fill="none"
             strokeLinecap="round"
             strokeWidth="8"
-          ></path>
+          />
           <path
             d="m204.5 176.4c29.7-6.7 52-8.4 67-5.1s26.9 8.6 35.8 15.9"
             fill="none"
             strokeLinecap="round"
             strokeWidth="8"
-          ></path>
+          />
           <path
             d="m196.5 181.4c20.3 9.9 38.2 20.5 53.9 31.9s27.4 22.1 35.1 32"
             fill="none"
             strokeLinecap="round"
             strokeWidth="8"
-          ></path>
+          />
         </g>
       </g>
       <defs>
@@ -556,7 +556,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="al-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -568,7 +568,7 @@ export const TanStackColorIcon = createIcon({
         id="d-cl-9"
       >
         <g filter="url(#al-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#d-cl-9)">
@@ -581,8 +581,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="u-cl-9"
         >
-          <stop stopColor="#FFF400" offset="0"></stop>
-          <stop stopColor="#3C8700" offset="1"></stop>
+          <stop stopColor="#FFF400" offset="0" />
+          <stop stopColor="#3C8700" offset="1" />
         </linearGradient>
         <ellipse
           cx="316.5"
@@ -590,7 +590,7 @@ export const TanStackColorIcon = createIcon({
           rx="266"
           ry="316.5"
           fill="url(#u-cl-9)"
-        ></ellipse>
+        />
       </g>
       <defs>
         <filter
@@ -601,7 +601,7 @@ export const TanStackColorIcon = createIcon({
           filterUnits="userSpaceOnUse"
           id="ad-cl-9"
         >
-          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></feColorMatrix>
+          <feColorMatrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" />
         </filter>
       </defs>
       <mask
@@ -613,7 +613,7 @@ export const TanStackColorIcon = createIcon({
         id="c-cl-9"
       >
         <g filter="url(#ad-cl-9)">
-          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff"></circle>
+          <circle cx="316.5" cy="316.5" r="316.5" fill="#fff" />
         </g>
       </mask>
       <g mask="url(#c-cl-9)">
@@ -626,10 +626,10 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="t-cl-9"
         >
-          <stop stopColor="#FFDF00" offset="0"></stop>
-          <stop stopColor="#FF9D00" offset="1"></stop>
+          <stop stopColor="#FFDF00" offset="0" />
+          <stop stopColor="#FF9D00" offset="1" />
         </linearGradient>
-        <circle cx="565.5" cy="89.5" r="113.5" fill="url(#t-cl-9)"></circle>
+        <circle cx="565.5" cy="89.5" r="113.5" fill="url(#t-cl-9)" />
         <linearGradient
           x1="-644.5"
           x2="-645.77"
@@ -639,8 +639,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="v-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="427"
@@ -652,7 +652,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#v-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="-641.56"
           x2="-642.83"
@@ -662,8 +662,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="aa-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="430.5"
@@ -675,7 +675,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#aa-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="-643.73"
           x2="-645"
@@ -685,8 +685,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="w-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="431"
@@ -698,7 +698,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#w-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="-638.94"
           x2="-640.22"
@@ -708,8 +708,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="ac-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="442"
@@ -721,7 +721,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#ac-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="-633.42"
           x2="-634.7"
@@ -731,8 +731,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="ab-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="464"
@@ -744,7 +744,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#ab-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="-619.05"
           x2="-619.52"
@@ -754,8 +754,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="y-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="491.4"
@@ -767,7 +767,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#y-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="-578.5"
           x2="-578.63"
@@ -777,8 +777,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="x-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="524.5"
@@ -790,7 +790,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#x-cl-9)"
-        ></line>
+        />
         <linearGradient
           x1="666.5"
           x2="666.5"
@@ -800,8 +800,8 @@ export const TanStackColorIcon = createIcon({
           gradientUnits="userSpaceOnUse"
           id="z-cl-9"
         >
-          <stop stopColor="#FFA400" offset="0"></stop>
-          <stop stopColor="#FF5E00" offset="1"></stop>
+          <stop stopColor="#FFA400" offset="0" />
+          <stop stopColor="#FF5E00" offset="1" />
         </linearGradient>
         <line
           x1="564.5"
@@ -813,7 +813,7 @@ export const TanStackColorIcon = createIcon({
           strokeLinejoin="bevel"
           strokeWidth="12"
           stroke="url(#z-cl-9)"
-        ></line>
+        />
       </g>
     </>
   ),

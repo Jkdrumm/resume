@@ -12,10 +12,25 @@ import { Education } from "./sections/Education";
 import { Experience } from "./sections/Experience";
 import { Projects } from "./sections/Projects";
 import { Extras } from "./sections/Extras";
+import { NextColorIcon } from "@/components/icons/NextColorIcon";
+import { ChakraColorIcon } from "@/components/icons/ChakraColorIcon";
+import { TanStackColorIcon } from "@/components/icons/TanStackColorIcon";
+import { PythonColorIcon } from "@/components/icons/PythonColorIcon";
+import { AntDesignColorIcon } from "@/components/icons/AntDesignColorIcon";
+import { NestJSColorIcon } from "@/components/icons/NestJSColorIcon";
 
 export default function Resume() {
   return (
     <Flex justifyContent="center" my={12}>
+      {/* Some icons (with linear gradients) aren't rendering properly in the hover cards if used more than once unless rendered in the page here as well */}
+      <Box w="0" h="0">
+        <NextColorIcon />
+        <ChakraColorIcon />
+        <TanStackColorIcon />
+        <PythonColorIcon />
+        <AntDesignColorIcon />
+        <NestJSColorIcon />
+      </Box>
       <Box
         w={850}
         borderRadius={4}
