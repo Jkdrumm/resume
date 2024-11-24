@@ -1,3 +1,6 @@
-<svg viewBox="0 0 100 100">
-  <path d="M0 0 50 0 a50 50 0 0 1 50 25 L0 50 M80 50 Z" fill="#000" />
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<g fill="currentColor">
+  <path d="M0 0 L50 0 A50 50 0 0 1 100 42 L84 42 A34 34 0 0 0 58 16 L50 16 L50 75 A1 1 0 0 1 0 75 L16 75 A1 1 0 0 0 34 75 L34 16 L0 16Z" />
+  <path d="M100 58 A50 50 0 0 1 58 100 L58 84 A34 34 0 0 0 84 58 Z" />
+  </g>
 </svg>
