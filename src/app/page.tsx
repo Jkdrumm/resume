@@ -3,7 +3,7 @@ import { MotionButton } from "@/components/compound/MotionButton";
 import { MotionText } from "@/components/compound/MotionText";
 import StarField from "@/components/compound/StarField";
 import { Box, Container } from "@chakra-ui/react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import { useState } from "react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { useRouter } from "next/navigation";

@@ -1,7 +1,7 @@
 "use client";
 import { MoonEffect } from "@/components/compound/MoonEffect";
 import { Box, Container, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { PropsWithChildren } from "react";
 
