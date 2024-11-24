@@ -1,6 +1,5 @@
 "use client";
 import { Link, LinkProps } from "@/components/compound/Link";
-// import { Avatar } from "@/components/ui/avatar";
 import {
   HoverCardArrow,
   HoverCardContent,
