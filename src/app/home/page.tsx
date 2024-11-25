@@ -1,6 +1,7 @@
 "use client";
+import { JDColorIcon } from "@/components/icons/JDColorIcon";
 import { Image } from "@/components/ui/image";
-import { Box, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Center, Container, Flex, Heading, Text } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -8,10 +9,19 @@ export default function Home() {
       <Container
         py="8"
         display="flex"
-        flexDir={{ base: "column", md: "row" }}
+        // flexDir={{ base: "column", md: "row" }}
         gap="16px"
       >
-        <Flex flexDir="column" align="center">
+        <Center w="inherit" p="40px">
+          <JDColorIcon fontSize="256px" />
+        </Center>
+      </Container>
+    </Box>
+  );
+}
+
+{
+  /* <Flex flexDir="column" align="center">
           <Image
             src="/josh.jpg"
             alt="Photo of me"
@@ -20,18 +30,5 @@ export default function Home() {
             borderRadius={150}
           />
           This is me 🎷
-        </Flex>
-        <Box flex="1">
-          <Heading textStyle="6xl">Hello</Heading>
-          <Flex gap="16px" w="inherit" flexDir="column">
-            <Text textStyle="md">
-              I am Joshua Drumm. I am a software engineer, musician, cyclist,
-              and perpetual learner.
-            </Text>
-            <Flex flexDir="column" gap="8px" maxW="600px"></Flex>
-          </Flex>
-        </Box>
-      </Container>
-    </Box>
-  );
+        </Flex> */
 }
