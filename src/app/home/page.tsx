@@ -1,21 +1,13 @@
 "use client";
-import { JDColorIcon } from "@/components/icons/JDColorIcon";
-import { Image } from "@/components/ui/image";
-import { Box, Center, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { Hero } from "./sections/Hero";
+import { About } from "./sections/About";
 
 export default function Home() {
   return (
-    <Box minH="1000vh">
-      <Container
-        py="8"
-        display="flex"
-        // flexDir={{ base: "column", md: "row" }}
-        gap="16px"
-      >
-        <Center w="inherit" p="40px">
-          <JDColorIcon fontSize="256px" />
-        </Center>
-      </Container>
+    <Box minH="100vh" pb="40">
+      <Hero />
+      <About />
     </Box>
   );
 }

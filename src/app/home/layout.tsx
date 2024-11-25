@@ -6,6 +6,7 @@ import Link from "next/link";
 import { PropsWithChildren } from "react";
 
 export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
+  return children;
   return (
     <motion.div
       initial={{ opacity: 0 }}
