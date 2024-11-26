@@ -4,20 +4,18 @@ import { Text, type TextProps } from "@chakra-ui/react";
 export type TypeTextProps = {
   text: string;
   isInView?: boolean;
-  speed?: number;
 } & TextProps;
 
 export const TypeText: React.FC<TypeTextProps> = ({
   text,
   isInView,
-  speed = 0.02,
   ...props
 }) => {
   const containerVariants = {
     initial: {},
     animate: {
       transition: {
-        staggerChildren: speed,
+        staggerChildren: 0.025,
         delayChildren: 0.25,
       },
     },
@@ -30,9 +28,19 @@ export const TypeText: React.FC<TypeTextProps> = ({
       animate={isInView ? "animate" : "initial"}
     >
       <Text {...props}>
-        <MotionConfig transition={{ duration: speed }}>
-          {text.split(/\\n|(?<!\\)\\n/).map((line, lineIndex) => (
-            <span key={lineIndex}>
+        <MotionConfig transition={{ duration: 0.025 }}>
+          {text.split("\n").map((line, lineIndex) => (
+            <motion.div
+              key={lineIndex}
+              variants={{
+                initial: { opacity: 0 },
+                animate: { opacity: 1 },
+              }}
+              style={{ display: "inline-block" }}
+              transition={{
+                delay: lineIndex * 0.5, // Add a delay for each line
+              }}
+            >
               {line.split("").map((char, charIndex) => (
                 <motion.span
                   key={`${lineIndex}-${charIndex}`}
@@ -44,8 +52,8 @@ export const TypeText: React.FC<TypeTextProps> = ({
                   {char}
                 </motion.span>
               ))}
-              {lineIndex < text.split(/\\n|(?<!\\)\\n/).length - 1 && <br />}
-            </span>
+              {lineIndex < text.split("\n").length - 1 && <br />}
+            </motion.div>
           ))}
         </MotionConfig>
       </Text>
