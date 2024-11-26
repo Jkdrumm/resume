@@ -48,7 +48,7 @@ export const Extras: React.FC<BeyondTheCodeProps> = (props) => {
         <ExtrasDetail
           name="Dad"
           icon={FaChildReaching}
-          description="Father of one"
+          description="Father of one child and four cats"
         />
         <ExtrasDetail
           name="Cooking Enthusiast"

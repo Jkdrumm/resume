@@ -11,6 +11,11 @@ const iconVariants: Variants = {
   animate: { pathLength: 1 },
 };
 
+const iconVariantsD: Variants = {
+  initial: { pathLength: 0.116 },
+  animate: { pathLength: 0.884 },
+};
+
 export const JDAnimatedIcon: React.FC<IconProps> = (props) => {
   return (
     <motion.div variants={{ initial: {}, animate: {} }}>
@@ -40,20 +45,20 @@ export const JDAnimatedIcon: React.FC<IconProps> = (props) => {
             </mask>
             <mask id="d-motion-mask-top">
               <motion.path
-                d="M57 8 L58 8 A42 42 0 0 1 92 42 L 92 43"
+                d="M50 8 L58 8 A42 42 0 0 1 92 42 L 92 50"
                 fill="none"
                 stroke="white"
                 strokeWidth="16"
-                variants={iconVariants}
+                variants={iconVariantsD}
               />
             </mask>
             <mask id="d-motion-mask-bottom">
               <motion.path
-                d="M92 57 L92 58 A42 42 0 0 1 58 92 L57 92"
+                d="M92 50 L92 58 A42 42 0 0 1 58 92 L50 92"
                 fill="none"
                 stroke="white"
                 strokeWidth="16"
-                variants={iconVariants}
+                variants={iconVariantsD}
               />
             </mask>
           </defs>

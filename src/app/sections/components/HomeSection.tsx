@@ -1,6 +1,6 @@
 import { ArrowAnimatedIcon } from "@/components/icons/ArrowAnimatedIcon";
 import { Flex, Container, Button } from "@chakra-ui/react";
-import { useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { forwardRef, useRef } from "react";
 
 export type HomeSectionProps = {
@@ -31,7 +31,6 @@ export const HomeSection = forwardRef<HTMLDivElement, HomeSectionProps>(
           ref={ref}
           h="75vh"
           maxW="6xl"
-          // mt={1}
           display="flex"
           flexDir="column"
           alignItems="center"
@@ -42,17 +41,25 @@ export const HomeSection = forwardRef<HTMLDivElement, HomeSectionProps>(
           {typeof children === "function" ? children({ isInView }) : children}
         </Container>
         {scrollRef?.current && (
-          <Flex flex="1" flexDir="column" justify="flex-end" pb="40px">
-            <Button variant="plain" mb="100px" p="0px">
-              <ArrowAnimatedIcon
-                alignSelf="flex-end"
-                fontSize="6xl"
-                onClick={() => {
-                  scrollRef?.current?.scrollIntoView({ behavior: "smooth" });
-                }}
-              />
-            </Button>
-          </Flex>
+          <motion.div
+            variants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 2 }}
+            style={{ marginTop: "-20px" }}
+          >
+            <Flex flex="1" flexDir="column" justify="flex-end">
+              <Button variant="plain" p="0px">
+                <ArrowAnimatedIcon
+                  alignSelf="flex-end"
+                  fontSize="6xl"
+                  onClick={() => {
+                    scrollRef?.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                />
+              </Button>
+            </Flex>
+          </motion.div>
         )}
       </Flex>
     );
