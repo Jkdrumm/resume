@@ -4,7 +4,12 @@ import React from "react";
 
 export const ArrowAnimatedIcon: React.FC<IconProps> = (props) => {
   return (
-    <motion.div variants={{ initial: { opacity: 0 }, animate: { opacity: 1 } }}>
+    <motion.div
+      variants={{
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+      }}
+    >
       <Icon {...props}>
         <motion.svg viewBox="0 0 24 24">
           <motion.path

@@ -29,18 +29,8 @@ export const TypeText: React.FC<TypeTextProps> = ({
     >
       <Text {...props}>
         <MotionConfig transition={{ duration: 0.025 }}>
-          {text.split("\n").map((line, lineIndex) => (
-            <motion.div
-              key={lineIndex}
-              variants={{
-                initial: { opacity: 0 },
-                animate: { opacity: 1 },
-              }}
-              style={{ display: "inline-block" }}
-              transition={{
-                delay: lineIndex * 0.5, // Add a delay for each line
-              }}
-            >
+          {text.split(/\\n|(?<!\\)\\n/).map((line, lineIndex) => (
+            <span key={lineIndex}>
               {line.split("").map((char, charIndex) => (
                 <motion.span
                   key={`${lineIndex}-${charIndex}`}
@@ -52,8 +42,8 @@ export const TypeText: React.FC<TypeTextProps> = ({
                   {char}
                 </motion.span>
               ))}
-              {lineIndex < text.split("\n").length - 1 && <br />}
-            </motion.div>
+              {lineIndex < text.split(/\\n|(?<!\\)\\n/).length - 1 && <br />}
+            </span>
           ))}
         </MotionConfig>
       </Text>

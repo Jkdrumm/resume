@@ -2,11 +2,14 @@ import { Link } from "@/components/compound/Link";
 import { MotionButton } from "@/components/compound/MotionButton";
 import { MotionHeading } from "@/components/compound/MotionHeading";
 import { MotionText } from "@/components/compound/MotionText";
-import { ArrowAnimatedIcon } from "@/components/icons/ArrowAnimatedIcon";
 import { JDAnimatedIcon } from "@/components/icons/JDAnimatedIcon";
-import { Box, Container, Flex, HStack, VStack } from "@chakra-ui/react";
+import { Flex, HStack, VStack } from "@chakra-ui/react";
 import { motion, MotionConfig, type Variants } from "motion/react";
 import React from "react";
+import {
+  HomeSection,
+  HomeSectionInstanceProps,
+} from "./components/HomeSection";
 
 const containerVariants: Variants = {
   initial: {},
@@ -23,65 +26,62 @@ const headingVariants: Variants = {
   animate: { rotateX: 0, opacity: 1 },
 };
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<HomeSectionInstanceProps> = ({ scrollRef }) => {
   return (
     <motion.div
       variants={containerVariants}
       initial="initial"
       animate="animate"
     >
-      <Box h="100vh" justifyItems="center">
-        <Container
-          py="16"
-          display="flex"
-          gap="16px"
-          maxW="4xl"
-          h="75vh"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <MotionConfig transition={{ duration: 0.5 }}>
-            <Flex
-              w="inherit"
-              flexDir={{ base: "column", md: "row" }}
-              align={{ base: "center", md: "flex-end" }}
-              gap={12}
-            >
-              <JDAnimatedIcon fontSize={{ base: 250, lg: 350 }} />
-              <VStack align={{ base: "center", md: "flex-start" }}>
-                <MotionHeading
-                  size={{ base: "5xl", lg: "6xl" }}
+      <HomeSection scrollRef={scrollRef}>
+        <MotionConfig transition={{ duration: 0.5 }}>
+          <Flex
+            w="inherit"
+            justify="center"
+            flexDir={{ base: "column", md: "row" }}
+            align={{ base: "center", md: "flex-end" }}
+            gap={12}
+          >
+            <JDAnimatedIcon fontSize={{ base: 250, lg: 350 }} />
+            <VStack align={{ base: "center", md: "flex-start" }}>
+              <MotionHeading
+                size={{ base: "5xl", lg: "6xl" }}
+                transformOrigin="50% 100% 0px"
+                transform="perspective(500px)"
+                variants={headingVariants}
+              >
+                Joshua Drumm
+              </MotionHeading>
+              <HStack gap={4}>
+                <MotionText
+                  textStyle="xl"
                   transformOrigin="50% 100% 0px"
                   transform="perspective(500px)"
                   variants={headingVariants}
                 >
-                  Joshua Drumm
-                </MotionHeading>
-                <HStack gap={4}>
-                  <MotionText
-                    textStyle="xl"
-                    transformOrigin="50% 100% 0px"
-                    transform="perspective(500px)"
-                    variants={headingVariants}
-                  >
-                    Software Engineer
-                  </MotionText>
-                  <MotionButton
-                    asChild
-                    bg="#00CFFF"
-                    transformOrigin="50% 100% 0px"
-                    transform="perspective(500px)"
-                    variants={headingVariants}
-                  >
-                    <Link href="/resume">Explore</Link>
-                  </MotionButton>
-                </HStack>
-              </VStack>
-            </Flex>
-          </MotionConfig>
-        </Container>
-        <ArrowAnimatedIcon fontSize="6xl" />
-      </Box>
+                  Software Engineer
+                </MotionText>
+                <MotionButton
+                  asChild
+                  bg="#00CFFF"
+                  transformOrigin="50% 100% 0px"
+                  transform="perspective(500px)"
+                  variants={headingVariants}
+                >
+                  <Link href="/resume">Explore</Link>
+                </MotionButton>
+              </HStack>
+            </VStack>
+          </Flex>
+        </MotionConfig>
+      </HomeSection>
+      {/* Causes a delay without having to explicitly pass the timing */}
+      {/* <motion.div variants={headingVariants} />
+        <motion.div variants={headingVariants} />
+        <Flex flex="1" flexDir="column" justify="flex-end" pb="120px">
+          <ArrowAnimatedIcon alignSelf="flex-end" fontSize="6xl" />
+        </Flex> */}
+      {/* </Flex> */}
     </motion.div>
   );
 };
