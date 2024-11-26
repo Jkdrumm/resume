@@ -1,5 +1,5 @@
 "use client";
 import { Button } from "../ui/button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export const MotionButton = motion(Button);

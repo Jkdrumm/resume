@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Provider } from "@/components/ui/provider";
+import { Box } from "@chakra-ui/react";
 
 export const metadata: Metadata = {
   title: "Joshua Drumm's Resume",
@@ -14,7 +15,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Provider>{children}</Provider>
+        <Provider>
+          <Box
+            position="fixed"
+            w="100%"
+            h="100%"
+            bgSize="250px"
+            bgRepeat="repeat"
+            bgImage="url('/static.png')"
+            opacity="0.06"
+            pointerEvents="none"
+          />
+          {children}
+        </Provider>
       </body>
     </html>
   );
