@@ -63,10 +63,9 @@ export const Hero: React.FC<HomeSectionInstanceProps> = ({ scrollRef }) => {
                   asChild
                   bg="#00CFFF"
                   transformOrigin="bottom"
-                  // transform="perspective(500px)"
                   variants={headingVariants}
                 >
-                  <Link href="/resume">Explore</Link>
+                  <Link href="/resume">About Me</Link>
                 </MotionButton>
               </HStack>
             </VStack>
