@@ -22,8 +22,8 @@ const containerVariants: Variants = {
 };
 
 const headingVariants: Variants = {
-  initial: { rotateX: -90, opacity: 0 },
-  animate: { rotateX: 0, opacity: 1 },
+  initial: { rotateX: -90, skewX: -13, opacity: 0 },
+  animate: { rotateX: 0, skewX: 1, opacity: 1 },
 };
 
 export const Hero: React.FC<HomeSectionInstanceProps> = ({ scrollRef }) => {
@@ -46,8 +46,7 @@ export const Hero: React.FC<HomeSectionInstanceProps> = ({ scrollRef }) => {
             <VStack align={{ base: "center", md: "flex-start" }}>
               <MotionHeading
                 size={{ base: "5xl", lg: "6xl" }}
-                transformOrigin="50% 100% 0px"
-                transform="perspective(500px)"
+                transformOrigin="bottom"
                 variants={headingVariants}
               >
                 Joshua Drumm
@@ -55,8 +54,7 @@ export const Hero: React.FC<HomeSectionInstanceProps> = ({ scrollRef }) => {
               <HStack gap={4}>
                 <MotionText
                   textStyle="xl"
-                  transformOrigin="50% 100% 0px"
-                  transform="perspective(500px)"
+                  transformOrigin="bottom"
                   variants={headingVariants}
                 >
                   Software Engineer
@@ -64,8 +62,8 @@ export const Hero: React.FC<HomeSectionInstanceProps> = ({ scrollRef }) => {
                 <MotionButton
                   asChild
                   bg="#00CFFF"
-                  transformOrigin="50% 100% 0px"
-                  transform="perspective(500px)"
+                  transformOrigin="bottom"
+                  // transform="perspective(500px)"
                   variants={headingVariants}
                 >
                   <Link href="/resume">Explore</Link>
