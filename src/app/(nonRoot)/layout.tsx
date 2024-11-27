@@ -28,6 +28,7 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
         height="60px"
         flexDir="row"
         align="center"
+        justify="space-between"
         p={4}
         zIndex={1}
       >
@@ -46,6 +47,8 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
             <Link href="/resume">Resume</Link>
           </HStack>
         </Container>
+        {/* Placeholder for hamburger menu*/}
+        <Box w="45px" />
       </Flex>
       <Container pt="90px">{children}</Container>
     </>
