@@ -36,7 +36,7 @@ export const IconBackground: React.FC<IconBackgroundProps> = ({
           aria-hidden="true"
           imageRendering="pixelated"
           flexShrink={0}
-          opacity={0.5}
+          opacity={0.7}
         >
           <Box width="100%" height="100%" aspectRatio="inherit">
             <Box width="100%" height="100%">
