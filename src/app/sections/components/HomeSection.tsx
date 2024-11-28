@@ -17,7 +17,7 @@ export type HomeSectionInstanceProps = {
 export const HomeSection = forwardRef<HTMLDivElement, HomeSectionProps>(
   ({ children, scrollRef }, flexRef) => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "-40px" });
+    const isInView = useInView(ref, { once: true, margin: "-75%" });
     return (
       <Flex
         ref={flexRef}
