@@ -18,7 +18,7 @@ export const End = forwardRef<HTMLDivElement, HomeSectionInstanceProps>(
               isInView={isInView}
               fontSize={{ base: "xl", md: "2xl" }}
               text={[
-                "Looks like you've reached the end.\n\nThis is still a WIP feel free to check back later for updates.\n\nClick to learn more",
+                "Looks like you've reached the end.\n\nThis is still a WIP so feel free to check back later for updates.\n\nClick to learn more",
                 <Button
                   key="aboutMeLink"
                   variant="surface"

@@ -44,6 +44,7 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
           fontWeight="bold"
         >
           <HStack gap="16px">
+            <Link href="/home">Home</Link>
             <Link href="/resume">Resume</Link>
           </HStack>
         </Container>
