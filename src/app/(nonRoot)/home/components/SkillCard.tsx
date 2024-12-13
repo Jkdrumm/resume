@@ -55,9 +55,10 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   const isInCenter =
     yPosition &&
     yPosition <=
-      (window.innerHeight + boundingHeight) / 2 - mobileHeightAnimationOffset &&
+      (window?.innerHeight + boundingHeight) / 2 -
+        mobileHeightAnimationOffset &&
     yPosition >=
-      (window.innerHeight - boundingHeight) / 2 -
+      (window?.innerHeight - boundingHeight) / 2 -
         mobileHeightAnimationOffset -
         mobileHeightAnimationGap;
 
@@ -81,7 +82,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
 
   useEffect(() => {
     const updateYPosition = () => {
-      if (!componentRef.current) return;
+      if (!componentRef.current || !window) return;
       const rect = componentRef.current.getBoundingClientRect();
       setYPosition(rect.top);
     };
