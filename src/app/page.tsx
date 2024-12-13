@@ -14,16 +14,3 @@ export default function Home() {
     </Box>
   );
 }
-
-{
-  /* <Flex flexDir="column" align="center">
-    <Image
-      src="/josh.jpg"
-      alt="Photo of me"
-      width="300"
-      height="300"
-      borderRadius={150}
-    />
-    This is me 🎷
-  </Flex> */
-}

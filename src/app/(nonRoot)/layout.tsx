@@ -51,7 +51,9 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
         {/* Placeholder for hamburger menu*/}
         <Box w="45px" />
       </Flex>
-      <Container pt="90px">{children}</Container>
+      <Container py="90px" maxW="5xl">
+        {children}
+      </Container>
     </>
   );
 }
