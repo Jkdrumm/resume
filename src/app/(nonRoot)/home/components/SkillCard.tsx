@@ -48,22 +48,9 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   const [colorRGB] = useToken("colors", [color as string]);
   const animationRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
-  const [yPosition, setYPosition] = useState<number | null>(null);
   const position = useRef<number>(0);
-  const boundingHeight =
-    componentRef.current?.getBoundingClientRect().height ?? 0;
 
-  const isInCenter =
-    typeof window === "undefined"
-      ? false
-      : yPosition &&
-        yPosition <=
-          (window?.innerHeight + boundingHeight) / 2 -
-            mobileHeightAnimationOffset &&
-        yPosition >=
-          (window?.innerHeight - boundingHeight) / 2 -
-            mobileHeightAnimationOffset -
-            mobileHeightAnimationGap;
+  const [isInCenter, setIsInCenter] = useState(false);
 
   useAnimationFrame((_, delta) => {
     const shouldAnimateMd = isMedium && isHovering;
@@ -85,12 +72,26 @@ export const SkillCard: React.FC<SkillCardProps> = ({
 
   useEffect(() => {
     const updateYPosition = () => {
-      if (!componentRef.current || typeof window === "undefined") return;
+      if (!componentRef.current || typeof window === "undefined" || isMedium)
+        return;
+
       const rect = componentRef.current.getBoundingClientRect();
-      setYPosition(rect.top);
+      const yPosition = rect.top;
+
+      const boundingHeight = rect.height ?? 0;
+
+      setIsInCenter(
+        yPosition <=
+          (window.innerHeight + boundingHeight) / 2 -
+            mobileHeightAnimationOffset &&
+          yPosition >=
+            (window.innerHeight - boundingHeight) / 2 -
+              mobileHeightAnimationOffset -
+              mobileHeightAnimationGap
+      );
     };
 
-    // Update on mount and on window scroll
+    // Initialize state and add listeners
     updateYPosition();
     window.addEventListener("scroll", updateYPosition);
     window.addEventListener("resize", updateYPosition);
@@ -99,7 +100,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
       window.removeEventListener("scroll", updateYPosition);
       window.removeEventListener("resize", updateYPosition);
     };
-  }, []);
+  }, [isMedium, mobileHeightAnimationGap, mobileHeightAnimationOffset]);
 
   return (
     <motion.div
