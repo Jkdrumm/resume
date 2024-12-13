@@ -54,14 +54,16 @@ export const SkillCard: React.FC<SkillCardProps> = ({
     componentRef.current?.getBoundingClientRect().height ?? 0;
 
   const isInCenter =
-    yPosition &&
-    yPosition <=
-      (window?.innerHeight + boundingHeight) / 2 -
-        mobileHeightAnimationOffset &&
-    yPosition >=
-      (window?.innerHeight - boundingHeight) / 2 -
-        mobileHeightAnimationOffset -
-        mobileHeightAnimationGap;
+    typeof window === "undefined"
+      ? false
+      : yPosition &&
+        yPosition <=
+          (window?.innerHeight + boundingHeight) / 2 -
+            mobileHeightAnimationOffset &&
+        yPosition >=
+          (window?.innerHeight - boundingHeight) / 2 -
+            mobileHeightAnimationOffset -
+            mobileHeightAnimationGap;
 
   useAnimationFrame((_, delta) => {
     const shouldAnimateMd = isMedium && isHovering;
