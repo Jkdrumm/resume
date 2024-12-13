@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardRootProps, useMediaQuery, useToken } from "@chakra-ui/react";
 import { motion, useAnimationFrame } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
@@ -82,7 +83,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
 
   useEffect(() => {
     const updateYPosition = () => {
-      if (!componentRef.current || !window) return;
+      if (!componentRef.current || typeof window === "undefined") return;
       const rect = componentRef.current.getBoundingClientRect();
       setYPosition(rect.top);
     };
