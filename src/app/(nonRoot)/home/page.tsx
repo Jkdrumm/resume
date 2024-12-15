@@ -21,7 +21,7 @@ export default function Home() {
         mb={{ base: 48, md: 0 }}
         alignItems="stretch"
       >
-        <SkillCard
+        {/* <SkillCard
           title="Front-End Specialist"
           description="Proficient in TypeScript, React, and modern front-end development tools like Ant Design, Chakra UI, and React Motion"
           color="blue.400"
@@ -72,7 +72,7 @@ export default function Home() {
           title="And More!"
           description="Always eager to learn new technologies and take on new challenges"
           color="magenta"
-        />
+        /> */}
       </Grid>
     </>
   );
