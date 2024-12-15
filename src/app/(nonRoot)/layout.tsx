@@ -12,7 +12,7 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
         top="0"
         w="100%"
         height="90px"
-        zIndex={1}
+        zIndex="sticky"
         backgroundColor="transparent"
         backgroundImage="radial-gradient(#00000088 1px, rgb(15, 17, 21) 1px)"
         backdropFilter="blur(4px)"
@@ -30,7 +30,7 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
         align="center"
         justify="space-between"
         p={4}
-        zIndex={1}
+        zIndex="sticky"
       >
         <Link href="/">
           <JDColorIcon fontSize="45px" />
@@ -44,13 +44,16 @@ export default function HomeLayout({ children }: Readonly<PropsWithChildren>) {
           fontWeight="bold"
         >
           <HStack gap="16px">
+            <Link href="/home">Home</Link>
             <Link href="/resume">Resume</Link>
           </HStack>
         </Container>
         {/* Placeholder for hamburger menu*/}
         <Box w="45px" />
       </Flex>
-      <Container pt="90px">{children}</Container>
+      <Container py="90px" maxW="5xl">
+        {children}
+      </Container>
     </>
   );
 }

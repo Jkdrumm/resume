@@ -16,6 +16,7 @@ import { SocketIO } from "../skills/SocketIO";
 import { RaspberryPi } from "../skills/RaspberryPi";
 import { ReactNative } from "../skills/ReactNative";
 import { Motion } from "../skills/Motion";
+import { OnePasswordCLI } from "../skills/1PasswordCLI";
 
 export const Projects: React.FC = () => {
   return (
@@ -55,7 +56,7 @@ export const Projects: React.FC = () => {
         icon={FaIdCard}
         href="https://github.com/Jkdrumm/resume"
         description="My personal website and resume. This is where this page is hosted."
-        skills={[ReactSkill, TypeScript, NextJS, Motion]}
+        skills={[ReactSkill, TypeScript, NextJS, Motion, OnePasswordCLI]}
       />
     </Section>
   );

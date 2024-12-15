@@ -66,7 +66,7 @@ export const Hero = forwardRef<HTMLDivElement, HomeSectionInstanceProps>(
                     transformOrigin="bottom"
                     variants={headingVariants}
                   >
-                    <Link href="/resume">About Me</Link>
+                    <Link href="/home">About Me</Link>
                   </MotionButton>
                 </HStack>
               </VStack>

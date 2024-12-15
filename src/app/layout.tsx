@@ -25,7 +25,7 @@ export default function RootLayout({
             bgImage="url('/static.png')"
             opacity="0.06"
             pointerEvents="none"
-            zIndex={999}
+            zIndex="max"
           />
           {children}
         </Provider>
