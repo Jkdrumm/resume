@@ -50,11 +50,18 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   mobileHeightAnimationGap = 32,
   ...props
 }) => {
-  const componentRef = useRef<HTMLDivElement>(null);
-  const [isMedium] = useMediaQuery(["(min-width: 48em)"], {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  const [isMedium] = useMediaQuery(isClient ? ["(min-width: 48em)"] : [], {
     ssr: false,
     fallback: [false],
   });
+
+  const componentRef = useRef<HTMLDivElement>(null);
   const [colorRGB] = useToken("colors", [color as string]);
   const animationRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
