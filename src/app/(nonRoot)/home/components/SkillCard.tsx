@@ -2,7 +2,6 @@ import {
   Card,
   CardRootProps,
   HTMLChakraProps,
-  useMediaQuery,
   useToken,
 } from "@chakra-ui/react";
 import { motion, useAnimationFrame } from "motion/react";
@@ -50,16 +49,17 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   mobileHeightAnimationGap = 32,
   ...props
 }) => {
-  const [isClient, setIsClient] = useState(false);
+  const [isMedium, setIsMedium] = useState(false);
 
+  // Using our own media query logic instead of Chakra's useMediaQuery hook since it has issues with SSR
   useEffect(() => {
-    setIsClient(true);
+    const mediaQuery = window.matchMedia("(min-width: 48em)");
+    const handleMediaChange = (e: MediaQueryListEvent) =>
+      setIsMedium(e.matches);
+    setIsMedium(mediaQuery.matches);
+    mediaQuery.addEventListener("change", handleMediaChange);
+    return () => mediaQuery.removeEventListener("change", handleMediaChange);
   }, []);
-
-  const [isMedium] = useMediaQuery(isClient ? ["(min-width: 48em)"] : [], {
-    ssr: false,
-    fallback: [false],
-  });
 
   const componentRef = useRef<HTMLDivElement>(null);
   const [colorRGB] = useToken("colors", [color as string]);
