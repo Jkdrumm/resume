@@ -27,7 +27,7 @@ export const End = forwardRef<HTMLDivElement, HomeSectionInstanceProps>(
                   mt={-2}
                   ml={2}
                 >
-                  <Link href="/resume" style={{ display: "inline-block" }}>
+                  <Link href="/home" style={{ display: "inline-block" }}>
                     <TypeText
                       fontWeight="normal"
                       isInView={isInView}
