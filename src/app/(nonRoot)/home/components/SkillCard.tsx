@@ -143,7 +143,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
             background: `linear-gradient(225deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 1) 100%), ${colorRGB}`,
           }}
         />
-        <Card.Body zIndex={1}>
+        <Card.Body zIndex="base">
           <Card.Title>{title}</Card.Title>
           <Card.Description>{description}</Card.Description>
         </Card.Body>
