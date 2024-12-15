@@ -13,7 +13,7 @@ export const ContactDetail: React.FC<ContactDetailProps> = ({
   label,
 }) => {
   return (
-    <Link href={href} isExternal>
+    <Link href={href} isExternal w="-webkit-max-content">
       <Flex gap={1}>
         {icon && <Icon>{icon}</Icon>}
         <Text textStyle="xs">{label}</Text>
