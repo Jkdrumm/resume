@@ -1,4 +1,3 @@
-"use client";
 import {
   Card,
   CardRootProps,
@@ -52,7 +51,10 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   ...props
 }) => {
   const componentRef = useRef<HTMLDivElement>(null);
-  const [isMedium] = useMediaQuery(["(min-width: 48em)"], { ssr: false });
+  const [isMedium] = useMediaQuery(["(min-width: 48em)"], {
+    ssr: false,
+    fallback: [false],
+  });
   const [colorRGB] = useToken("colors", [color as string]);
   const animationRef = useRef<HTMLDivElement>(null);
   const [isHovering, setIsHovering] = useState(false);
@@ -79,7 +81,6 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   };
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
     const updateYPosition = () => {
       if (!componentRef.current || isMedium) return;
 
@@ -117,7 +118,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
         initial: { scale: 1 },
         animate: { scale: 1.05 },
       }}
-      whileHover={{ scale: 1.05 }}
+      whileHover={isMedium ? { scale: 1.05 } : undefined}
       animate={!isMedium && isInCenter ? "animate" : "initial"}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

@@ -1,7 +1,7 @@
 "use client";
 import { Grid } from "@chakra-ui/react";
 import { HeroCard } from "./components/HeroCard";
-// import { SkillCard } from "./components/SkillCard";
+import { SkillCard } from "./components/SkillCard";
 
 export default function Home() {
   return (
@@ -18,10 +18,10 @@ export default function Home() {
         gap={8}
         flex="1"
         mt={16}
-        mb={{ base: 48, md: 0 }}
+        mb={{ base: 256, md: 0 }}
         alignItems="stretch"
       >
-        {/* <SkillCard
+        <SkillCard
           title="Front-End Specialist"
           description="Proficient in TypeScript, React, and modern front-end development tools like Ant Design, Chakra UI, and React Motion"
           color="blue.400"
@@ -67,12 +67,12 @@ export default function Home() {
           color="red.400"
         />
         <SkillCard
-          // Add an extra in MD only because 9 is not divisible into the two columnns used in MD
-          display={{ base: "none", md: "block", lg: "none" }}
+          // Hide in LG only because 10 is not divisible into the 3 columnns used in LG
+          display={{ base: "block", lg: "none" }}
           title="And More!"
           description="Always eager to learn new technologies and take on new challenges"
           color="magenta"
-        /> */}
+        />
       </Grid>
     </>
   );
