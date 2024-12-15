@@ -21,7 +21,7 @@ export const Education: React.FC = () => {
           "B.S. in Software Engineering",
           "Summa Cum Laude",
         ]}
-        date="2018 - 2020"
+        date="2014 - 2018"
         icon={UCOIcon}
       />
     </Section>
