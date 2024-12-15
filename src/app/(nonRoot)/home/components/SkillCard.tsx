@@ -53,6 +53,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   const [isInCenter, setIsInCenter] = useState(false);
 
   useAnimationFrame((_, delta) => {
+    if (typeof window === "undefined") return;
     const shouldAnimateMd = isMedium && isHovering;
     const shouldAnimateBase = !isMedium && isInCenter;
     const shouldAnimate =
@@ -71,9 +72,9 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     const updateYPosition = () => {
-      if (!componentRef.current || typeof window === "undefined" || isMedium)
-        return;
+      if (!componentRef.current || isMedium) return;
 
       const rect = componentRef.current.getBoundingClientRect();
       const yPosition = rect.top;
