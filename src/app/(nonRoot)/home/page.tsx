@@ -68,7 +68,7 @@ export default function Home() {
         />
         <SkillCard
           // Hide in LG only because 10 is not divisible into the 3 columnns used in LG
-          display={{ base: "block", lg: "none" }}
+          display={{ base: "flex", lg: "none" }}
           title="And More!"
           description="Always eager to learn new technologies and take on new challenges"
           color="magenta"
