@@ -1,5 +1,11 @@
 "use client";
-import { Card, CardRootProps, useMediaQuery, useToken } from "@chakra-ui/react";
+import {
+  Card,
+  CardRootProps,
+  HTMLChakraProps,
+  useMediaQuery,
+  useToken,
+} from "@chakra-ui/react";
 import { motion, useAnimationFrame } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -32,9 +38,10 @@ export type SkillCardProps = {
    * The mobile height animation gap in pixels
    */
   mobileHeightAnimationGap?: number;
-};
+} & HTMLChakraProps<"div">;
 
 export const SkillCard: React.FC<SkillCardProps> = ({
+  style,
   title,
   description,
   color,
@@ -42,6 +49,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   size = 10,
   mobileHeightAnimationOffset = 100,
   mobileHeightAnimationGap = 32,
+  ...props
 }) => {
   const componentRef = useRef<HTMLDivElement>(null);
   const [isMedium] = useMediaQuery(["(min-width: 48em)"], { ssr: false });
@@ -53,7 +61,6 @@ export const SkillCard: React.FC<SkillCardProps> = ({
   const [isInCenter, setIsInCenter] = useState(false);
 
   useAnimationFrame((_, delta) => {
-    if (typeof window === "undefined") return;
     const shouldAnimateMd = isMedium && isHovering;
     const shouldAnimateBase = !isMedium && isInCenter;
     const shouldAnimate =
@@ -114,9 +121,9 @@ export const SkillCard: React.FC<SkillCardProps> = ({
       animate={!isMedium && isInCenter ? "animate" : "initial"}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      style={{ flex: 1, display: "flex" }}
+      style={{ flex: 1, display: "flex", ...style }}
     >
-      <Card.Root borderColor={color} width="100%">
+      <Card.Root borderColor={color} width="100%" {...props}>
         <motion.div
           ref={animationRef}
           style={{
