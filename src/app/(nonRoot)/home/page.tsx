@@ -1,7 +1,7 @@
 "use client";
 import { Grid } from "@chakra-ui/react";
 import { HeroCard } from "./components/HeroCard";
-import { SkillCard } from "./components/SkillCard";
+// import { SkillCard } from "./components/SkillCard";
 
 export default function Home() {
   return (
