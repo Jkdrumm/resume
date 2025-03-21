@@ -116,7 +116,7 @@ export const Experience: React.FC = () => {
         company="Paycom"
         title="Software Developer"
         icon={PaycomIcon}
-        startDate="Sep 2020"
+        startDate="May 2020"
         endDate="Dec 2021"
         description="Full stack web development with React, PHP, and MySQL. Refactored, redesigned, and optimized web pages for a better user experience"
         highlights={[
